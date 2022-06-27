@@ -1,11 +1,30 @@
 import { writeFileSync } from "fs";
-import { execSync } from "child_process";
+import { exec } from "child_process";
 import { join } from "path";
 
+function getUrl(){
 
-function getHomepage() {
-	const [r, u] = (
-		execSync("git remote get-url origin"))
+	return new Promise<string | undefined>(resolve => {
+		exec("git remote get-url origin", (err, url) => {
+			if (err !== null) {
+				console.log("This git repository does not have a remote origin !");
+				resolve(undefined);
+				return;
+			}
+
+			resolve(url);
+
+		});
+	});
+}
+
+async function getHomepage() {
+	const url = await getUrl();
+	if(url === undefined){
+		return;
+	}
+	const [r, u] = 
+		url
 		.toString()
 		.replace(/\n/g, "")
 		.replace(".git", "")
@@ -17,13 +36,18 @@ function getHomepage() {
 	return "https://" + u + ".github.io/" + r;
 }
 
-function writeHomepageToPackageJson() {
+async function writeHomepageToPackageJson() {
+	const homepage = await getHomepage();
+
+	if(homepage === undefined){
+		return;
+	}
 
 	writeFileSync(
 		"package.json",
 		JSON.stringify({
 			...require(join(__dirname, "..", "..", "package.json")),
-			"homepage": getHomepage()
+			"homepage": homepage
 		}, null, 2)
 	)
 
