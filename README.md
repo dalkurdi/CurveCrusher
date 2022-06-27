@@ -1,4 +1,4 @@
-# cra-template-typescript
+# cra-template-gitlanding
 
 This is the official gitlanding template for [Create React App](https://github.com/thieryw/gitlanding/tree/cra-template-gitlanding).
 
