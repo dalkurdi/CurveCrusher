@@ -1,13 +1,14 @@
 {
-  "name": "cra-template-typescript",
-  "version": "1.2.0",
+  "name": "cra-template-gitlanding",
+  "version": "0.0.1",
   "keywords": [
     "react",
     "create-react-app",
     "template",
-    "typescript"
+    "typescript",
+    "gitlanding"
   ],
-  "description": "The base TypeScript template for Create React App.",
+  "description": "The base TypeScript template for Create React App with gitlanding.",
   "repository": {
     "type": "git",
     "url": "https://github.com/facebook/create-react-app.git",
