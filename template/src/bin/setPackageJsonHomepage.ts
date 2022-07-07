@@ -37,20 +37,25 @@ async function getHomepage() {
 }
 
 async function writeHomepageToPackageJson() {
+
 	const homepage = await getHomepage();
 
-	if(homepage === undefined){
-		return;
+	const packageJson = require(join(__dirname, "..", "..", "package.json"));
+
+	delete packageJson["scripts"]["postinstall"];
+
+	if(homepage !== undefined){
+		packageJson["homepage"] = homepage
 	}
 
 	writeFileSync(
 		"package.json",
 		JSON.stringify({
-			...require(join(__dirname, "..", "..", "package.json")),
-			"homepage": homepage
+			...packageJson
 		}, null, 2)
 	)
 
 }
+
 
 writeHomepageToPackageJson();

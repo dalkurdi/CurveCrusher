@@ -3,14 +3,15 @@ import { GlHero } from "gitlanding/GlHero/GlHero";
 import { GlArticle } from "gitlanding/GlArticle";
 import { GlCards } from "gitlanding/GlCards";
 import { GlLogoCard } from "gitlanding/GlCards/GlLogoCard";
-
+import { declareComponentKeys, useTranslation } from "i18n";
 
 export const Home = memo(() => {
+	const { t } = useTranslation({ Home });
 	return (
 		<>
 			<GlHero
-				title="Hero title"
-				subTitle="Hero subtitle"
+				title={t("heroTitle")}
+				subTitle={t("heroSubtitle")}
 				illustration={{
 					"type": "image",
 					"src": "https://user-images.githubusercontent.com/39378411/135731749-4a723d4e-52ea-49b7-83c1-7da4db8f3f59.png",
@@ -20,15 +21,9 @@ export const Home = memo(() => {
 			/>
 
 			<GlArticle
-				id="firstSection"
-				title="Article title"
-				body={`Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus, 
-                    nisl nec hendrerit rutrum, 
-                    mi enim **semper arcu**, ut imperdiet urna libero non metus. 
-                    Donec imperdiet ac nulla sit amet lacinia. 
-                    Suspendisse volutpat lectus vitae libero luctus, a egestas magna egestas. 
-                    Suspendisse potenti. In semper erat scelerisque sapien convallis porttitor.`}
-				buttonLabel="Article Button label"
+				title={t("articleTitle")}
+				body={t("articleBody")}
+				buttonLabel={t("articleButtonLabel")}
 				buttonLink={{
 					"href": "https://example.com",
 				}}
@@ -45,10 +40,8 @@ export const Home = memo(() => {
 				{
 					<>
 						<GlLogoCard
-							title="Card title"
-							paragraph={`Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus, 
-                                nisl nec hendrerit rutrum, 
-                                mi enim semper arcu, ut imperdiet urna libero non metus.`}
+							title={t("card1Title")}
+							paragraph={t("card1Paragraph")}
 							buttonLabel="Button Label"
 							iconUrls={[
 								"https://user-images.githubusercontent.com/39378411/135731999-a2d8f901-3d7d-40a9-b59f-102ee1facc45.png",
@@ -56,10 +49,8 @@ export const Home = memo(() => {
 							]}
 						/>
 						<GlLogoCard
-							title="Card title"
-							paragraph={`Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus, 
-                                nisl nec hendrerit rutrum, 
-                                mi enim semper arcu, ut imperdiet urna libero non metus.`}
+							title={t("card2Title")}
+							paragraph={t("card2Paragraph")}
 							buttonLabel="Button Label"
 							iconUrls={[
 								"https://user-images.githubusercontent.com/39378411/135731998-e01a7970-a7c4-4041-b07c-341e075207d2.png",
@@ -67,10 +58,8 @@ export const Home = memo(() => {
 						/>
 
 						<GlLogoCard
-							title="Card title"
-							paragraph={`Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus, 
-                                nisl nec hendrerit rutrum, 
-                                mi enim semper arcu, ut imperdiet urna libero non metus.`}
+							title={t("card3Title")}
+							paragraph={t("card3Paragraph")}
 							buttonLabel="Button Label"
 							iconUrls={[
 								"https://user-images.githubusercontent.com/39378411/135731991-3da13e97-c2f7-42b2-88ab-055aff0d6ae9.png",
@@ -85,4 +74,18 @@ export const Home = memo(() => {
 			</GlCards>
 		</>
 	);
-})
+});
+
+export const { i18n } = declareComponentKeys<
+	| "heroTitle"
+	| "heroSubtitle"
+	| "articleTitle"
+	| "articleBody"
+	| "articleButtonLabel"
+	| "card1Title"
+	| "card2Title"
+	| "card3Title"
+	| "card1Paragraph"
+	| "card2Paragraph"
+	| "card3Paragraph"
+>()({ Home });

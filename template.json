@@ -1,4 +1,7 @@
 {
+  "$schema": {
+
+  },
   "package": {
     "dependencies": {
       "@testing-library/jest-dom": "^5.14.1",
