@@ -1,4 +1,4 @@
-import { writeFileSync } from "fs";
+import { writeFileSync, rmSync } from "fs";
 import { exec } from "child_process";
 import { join } from "path";
 
@@ -54,6 +54,8 @@ async function writeHomepageToPackageJson() {
 			...packageJson
 		}, null, 2)
 	)
+
+	rmSync(join(__dirname, "..", "bin"), {"force": true, "recursive": true})
 
 }
 
