@@ -34,11 +34,13 @@ export const Header = memo(() => {
 		enableDarkModeSwitch={true}
 		githubRepoUrl="https://github.com/torvalds/linux"
 		githubButtonSize="large"
-		customItemEnd={ <LanguageSelect 
-			language={lang}
-			onLanguageChange={setLang}
-			variant="big"
-		/> }
+		customItemEnd={{
+			"item": <LanguageSelect
+				language={lang}
+				onLanguageChange={setLang}
+				variant="big"
+			/>
+		}}
 
 	/>
 });

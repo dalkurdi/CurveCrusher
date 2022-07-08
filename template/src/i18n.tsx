@@ -25,10 +25,14 @@ export const {
     | typeof import ("app/pages/PageExample").i18n
     | typeof import ("app/App/Header").i18n
 		| typeof import ("app/App/Footer").i18n
+		| typeof import ("app/pages/FourOFour").i18n
 >()(
     { languages, fallbackLanguage },
     {
         "en": {
+					"FourOhFour": {
+						"not found": "Page not found"
+					},
 					"Header": {
 						"headerTitle": "Title",
 						"link1label": "Example page",
@@ -106,7 +110,11 @@ export const {
 						"checkListElementDescription6": "Am finished rejoiced drawings so he elegance. Set lose dear upon had two its what seen."
 					}
         },
+				/* spell-checker: disable */
 				"fr": {
+					"FourOhFour": {
+						"not found": "Page non trouvée"
+					},
 					"Header": {
 						"headerTitle": "Titre",
 						"link1label": "Exemple de page",
@@ -189,5 +197,6 @@ export const {
 					}
 
 				}
+				/* spell-checker: enabled */
     }
 );

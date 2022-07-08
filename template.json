@@ -1,14 +1,11 @@
 {
-  "$schema": {
-
-  },
   "package": {
     "dependencies": {
       "@testing-library/jest-dom": "^5.14.1",
       "@testing-library/react": "^13.0.0",
       "@testing-library/user-event": "^13.2.1",
       "web-vitals": "^2.1.0",
-      "gitlanding": "^0.20.1",
+      "gitlanding": "^0.20.3",
       "onyxia-ui": "^0.45.5",
       "@mui/material": "^5.8.5",
       "@emotion/react": "^11.9.3",
@@ -27,7 +24,7 @@
       "typescript": "^4.7.4"
     },
     "scripts": {
-      "postinstall": "ts-node --skip-project src/bin/setPackageJsonHomepage.ts"
+      "postinstall": "ts-node --skip-project src/bin/runScripts.ts"
     },
     "eslintConfig": {
       "extends": [

@@ -1,4 +1,4 @@
-import { writeFileSync, rmSync } from "fs";
+import { writeFileSync } from "fs";
 import { exec } from "child_process";
 import { join } from "path";
 
@@ -36,13 +36,11 @@ async function getHomepage() {
 	return "https://" + u + ".github.io/" + r;
 }
 
-async function writeHomepageToPackageJson() {
+export async function writeHomepageToPackageJson() {
 
 	const homepage = await getHomepage();
 
 	const packageJson = require(join(__dirname, "..", "..", "package.json"));
-
-	delete packageJson["scripts"]["postinstall"];
 
 	if(homepage !== undefined){
 		packageJson["homepage"] = homepage
@@ -55,9 +53,5 @@ async function writeHomepageToPackageJson() {
 		}, null, 2)
 	)
 
-	rmSync(join(__dirname, "..", "bin"), {"force": true, "recursive": true})
-
 }
 
-
-writeHomepageToPackageJson();
