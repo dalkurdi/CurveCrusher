@@ -18,13 +18,16 @@ export function App() {
 					"isRetracted": "smart",
 				}}
 				footer={<Footer />}
-			>
-				{route.name === "home" && <Home />}
-				{route.name === "pageExample" && <PageExample />}
-				{route.name === false && <FourOhFour />}
-
-			</GlTemplate >
-
+				body={
+					(()=>{
+						switch(route.name){
+							case "home": return <Home />;
+							case "pageExample": return <PageExample />;
+							default : return <FourOhFour />;
+						}
+					})()
+				}
+			/>
 		</ThemeProvider>
 	);
 }

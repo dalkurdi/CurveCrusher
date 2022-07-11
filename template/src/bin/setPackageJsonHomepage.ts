@@ -36,7 +36,7 @@ async function getHomepage() {
 	return "https://" + u + ".github.io/" + r;
 }
 
-export async function writeHomepageToPackageJson() {
+export async function setPackageJsonHomepage() {
 
 	const homepage = await getHomepage();
 

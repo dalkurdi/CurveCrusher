@@ -21,11 +21,11 @@ export const {
 	/** For use outside of React */
 	getTranslation 
 } = createI18nApi<
-    | typeof import ("app/pages/Home").i18n
-    | typeof import ("app/pages/PageExample").i18n
-    | typeof import ("app/App/Header").i18n
-		| typeof import ("app/App/Footer").i18n
-		| typeof import ("app/pages/FourOFour").i18n
+    | typeof import ("pages/Home").i18n
+    | typeof import ("pages/PageExample").i18n
+    | typeof import ("App/Header").i18n
+		| typeof import ("App/Footer").i18n
+		| typeof import ("pages/FourOFour").i18n
 >()(
     { languages, fallbackLanguage },
     {

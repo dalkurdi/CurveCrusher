@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { makeStyles, Text } from "../theme";
+import { makeStyles, Text } from "theme";
 import { declareComponentKeys } from "i18nifty";
 import { useTranslation } from "i18n";
 
@@ -21,7 +21,6 @@ export const { i18n } = declareComponentKeys<"not found">()({
 const useStyles = makeStyles({ "name": { FourOhFour } })(theme => ({
     "root": {
         "display": "flex",
-				"flex": 1,
         "alignItems": "center",
         "justifyContent": "center",
         "backgroundColor": theme.colors.useCases.surfaces.background,

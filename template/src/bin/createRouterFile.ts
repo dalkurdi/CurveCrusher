@@ -24,7 +24,7 @@ export async function createRouterFile() {
 
 	const repoName = await getRepoName();
 
-	writeFileSync(join(__dirname, "..", "app", "router.ts"),
+	writeFileSync(join(__dirname, "..", "router.ts"),
 		`
 import {createRouter, defineRoute} from "type-route";
 import {makeThisModuleAnExecutableRouteLister} from "github-pages-plugin-for-type-route";

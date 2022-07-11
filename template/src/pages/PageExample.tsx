@@ -5,7 +5,11 @@ import { GlCheckList } from "gitlanding/GlCheckList";
 import { GlCards } from "gitlanding/GlCards";
 import { GlSectionDivider } from "gitlanding/GlSectionDivider";
 import { declareComponentKeys, useTranslation } from "i18n";
-
+import articlePng from "assets/img/article-page-example.png"
+import pokemonPng from "assets/img/pokemon.png";
+import dataPng from "assets/img/data-visualisation.png";
+import kubernetesPng from "assets/img/kubernetes.png";
+import webinairePng from "assets/img/webinaire.png";
 
 
 export const PageExample = memo(() => {
@@ -23,35 +27,33 @@ export const PageExample = memo(() => {
 			}}
 			illustration={{
 				"type": "image",
-				"src": "https://user-images.githubusercontent.com/39378411/135731816-5ba39459-d95e-413d-b515-92a7b0dc5acf.png",
+				"src": articlePng,
 				"hasShadow": false
 			}}
 			hasAnimation={true}
 		/>
 
 		<GlCards>
-			<>
-				<GlProjectCard
-					title={t("projectCardTitle1")}
-					subtitle={t("projectCardSubtitle1")}
-					projectImageUrl="https://user-images.githubusercontent.com/39378411/135731821-0f1c7165-fada-418f-896a-c36a0e55171b.png"
-				/>
-				<GlProjectCard
-					title={t("projectCardTitle2")}
-					subtitle={t("projectCardSubtitle2")}
-					projectImageUrl="https://user-images.githubusercontent.com/39378411/135731810-93193eba-ada5-460a-96ad-948215278850.png"
-				/>
-				<GlProjectCard
-					title={t("projectCardTitle3")}
-					subtitle={t("projectCardSubtitle3")}
-					projectImageUrl="https://user-images.githubusercontent.com/39378411/135731819-1cf18697-e946-449f-ad6e-be414e341c40.png"
-				/>
-				<GlProjectCard
-					title={t("projectCardTitle4")}
-					subtitle={t("projectCardSubtitle4")}
-					projectImageUrl="https://user-images.githubusercontent.com/39378411/135731914-0265b77e-3338-4747-b014-e845f16332a7.png"
-				/>
-			</>
+			<GlProjectCard
+				title={t("projectCardTitle1")}
+				subtitle={t("projectCardSubtitle1")}
+				projectImageUrl={pokemonPng}
+			/>
+			<GlProjectCard
+				title={t("projectCardTitle2")}
+				subtitle={t("projectCardSubtitle2")}
+				projectImageUrl={dataPng}
+			/>
+			<GlProjectCard
+				title={t("projectCardTitle3")}
+				subtitle={t("projectCardSubtitle3")}
+				projectImageUrl={kubernetesPng}
+			/>
+			<GlProjectCard
+				title={t("projectCardTitle4")}
+				subtitle={t("projectCardSubtitle4")}
+				projectImageUrl={webinairePng}
+			/>
 		</GlCards>
 
 		<GlSectionDivider />
@@ -118,6 +120,4 @@ export const { i18n } = declareComponentKeys<
 	| "checkListElementDescription4"
 	| "checkListElementDescription5"
 	| "checkListElementDescription6"
-
-
 >()({ PageExample })

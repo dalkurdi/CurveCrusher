@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { GlHeader } from "gitlanding/GlHeader";
-import { routes } from "../router";
+import { routes } from "router";
 import { declareComponentKeys, useTranslation, useLang } from "i18n";
 import { createLanguageSelect } from "onyxia-ui/LanguageSelect";
 import type { Language } from "i18n";
