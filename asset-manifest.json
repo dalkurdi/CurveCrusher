@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.4fd86e6a.js",
+    "main.js": "/static/js/main.9e11cfdb.js",
     "static/media/sspcloud.mp4": "/static/media/sspcloud.a2420ffc6df7cdd8c262.mp4",
     "static/media/sspcloud-route.mp4": "/static/media/sspcloud-route.6f410021780761551af1.mp4",
     "static/media/hero-image-light.png": "/static/media/hero-image-light.cd5e64762d65fba6dcf1.png",
@@ -13,9 +13,9 @@
     "static/media/powerhooksLogo.svg": "/static/media/powerhooksLogo.ee97676b045a28e95ac479c7e65875ae.svg",
     "index.html": "/index.html",
     "static/media/OnyxiaLogo.svg": "/static/media/OnyxiaLogo.5b583358669e40552bc0b80491167714.svg",
-    "main.4fd86e6a.js.map": "/static/js/main.4fd86e6a.js.map"
+    "main.9e11cfdb.js.map": "/static/js/main.9e11cfdb.js.map"
   },
   "entrypoints": [
-    "static/js/main.4fd86e6a.js"
+    "static/js/main.9e11cfdb.js"
   ]
 }
