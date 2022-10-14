@@ -2,7 +2,7 @@
   "package": {
     "dependencies": {
       "web-vitals": "^2.1.4",
-      "gitlanding": "^0.23.0",
+      "gitlanding": "^0.23.15",
       "onyxia-ui": "^0.46.20",
       "@mui/material": "^5.10.3",
       "@emotion/react": "^11.10.4",
