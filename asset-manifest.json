@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.js": "/static/js/main.cc1709ea.js",
+    "main.js": "/static/js/main.e78f2fa6.js",
     "static/media/sspcloud.mp4": "/static/media/sspcloud.a2420ffc6df7cdd8c262.mp4",
     "static/media/sspcloud-route.mp4": "/static/media/sspcloud-route.6f410021780761551af1.mp4",
     "static/media/hero-image-light.png": "/static/media/hero-image-light.cd5e64762d65fba6dcf1.png",
     "static/media/hero-image.png": "/static/media/hero-image.28b366542c219e285941.png",
     "static/media/onyxia-ui.png": "/static/media/onyxia-ui.59b00a9f452d4af62dc5.png",
     "static/media/material-ui.png": "/static/media/material-ui.847e651240d9dce6b95e.png",
-    "static/media/tsafe.png": "/static/media/tsafe.c9f2c02ef122a9454582.png",
+    "static/media/keycloakify-logo.png": "/static/media/keycloakify-logo.6d217eea715da1475d08.png",
+    "static/media/tss-logo.png": "/static/media/tss-logo.6d2323ff7865235a7bd7.png",
     "static/media/logo.png": "/static/media/logo.f3b635f21260a1c22b17.png",
     "static/media/logo-small.png": "/static/media/logo-small.044e2bf5a95ab52d4db8.png",
-    "static/media/powerhooksLogo.svg": "/static/media/powerhooksLogo.ee97676b045a28e95ac479c7e65875ae.svg",
     "index.html": "/index.html",
+    "static/media/OnyxiaLogoOrange.svg": "/static/media/OnyxiaLogoOrange.9121c6d2e5532fc797cb90c878bf6d85.svg",
     "static/media/OnyxiaLogo.svg": "/static/media/OnyxiaLogo.5b583358669e40552bc0b80491167714.svg",
-    "main.cc1709ea.js.map": "/static/js/main.cc1709ea.js.map"
+    "main.e78f2fa6.js.map": "/static/js/main.e78f2fa6.js.map"
   },
   "entrypoints": [
-    "static/js/main.cc1709ea.js"
+    "static/js/main.e78f2fa6.js"
   ]
 }
